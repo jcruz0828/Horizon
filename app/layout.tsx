@@ -1,5 +1,5 @@
 export const dynamic = 'force-dynamic'
-
+import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next";
 import {Inter,IBM_Plex_Serif} from "next/font/google";
 import "./globals.css";
@@ -24,6 +24,7 @@ export default function RootLayout({
         className={`${inter.variable} ${imbPlexSerif.variable}`}
       >
         {children}
+        <Analytics></Analytics>
       </body>
     </html>
   );
